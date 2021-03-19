@@ -5,6 +5,10 @@ import Products from "./pages/Products";
 import Signup from "./pages/Signup";
 import "./App.css";
 import { css } from "@emotion/react";
+import styled from "@emotion/styled";
+import Home from "./pages/Home";
+
+
 
 function App() {
   return (
@@ -14,15 +18,16 @@ function App() {
           overflow: auto;
           margin: auto;
           height: 100vh;
+          width: 414px;
           border-radius: 20px;
+          background: #FFFFFF;
         `}
       >
+        <Route exact path="/" component={Home} />
         <Route exact path="/" component={Products} />
         <Route path="/login" component={Login} />
         <Route path="/sign-up" component={Signup} />
-
-        
-      </div>
+      </div>  
     </Router>
   );
 }

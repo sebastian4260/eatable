@@ -1,26 +1,32 @@
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
-import Icon from "../UI/icons"
 import { Link, useLocation } from "react-router-dom";
 
 const StyledUl = styled.ul`
   display: flex;
   flex-direction: row;
   list-style-type: none;
-  padding: 30px 50px 0;
-  justify-content: space-around;
+  background: #F6F6F9;
+  padding: 35px 53px;
+  margin: 0px;
+  justify-content: space-between;
   align-items: center;
 `;
 
 const ListItem = styled.li`
-  text-decoration: none;
+  & > a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 25px;
   &.selected {
             color: #fa4a0c;
             filter: drop-shadow(0px 6px 20px rgba(215, 56, 0, 0.4));
           }
+  }
 `;
 
-const Sections = ["home", "profile", "history"];
+const sections = ["home", "profile", "history"];
 const icons = {
   home: <i className="ri-home-2-line"></i>,
   profile: <i className="ri-user-line"></i>,
@@ -29,6 +35,13 @@ const icons = {
 
 export default function Navbar() {
   const location = useLocation();
+  const isSelected = (section) => {
+    return (
+      (location.pathname === "/" && section === "home") ||
+      location.pathname === `/${section}`
+    );
+  };
+
   return (
     <StyledUl>
       {sections.map((section) => (
