@@ -5,7 +5,6 @@ import Products from "./pages/Products";
 import Signup from "./pages/Signup";
 import "./App.css";
 import { css } from "@emotion/react";
-import styled from "@emotion/styled";
 import Home from "./pages/Home";
 
 
