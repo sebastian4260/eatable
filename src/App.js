@@ -1,10 +1,14 @@
 /** @jsxImportSource @emotion/react */
-import styled from "@emotion/styled";
-import { css } from "@emotion/react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Loading from "./pages/LoadingPage";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 import "./App.css";
+import { css } from "@emotion/react";
+
+
+
 
 function App() {
   return (
@@ -20,6 +24,8 @@ function App() {
         `}
       >
         <Route exact path="/" component={Loading} />
+        <Route path="/login" component={Login} />
+        <Route path="/sign-up" component={Signup} />
       </div>  
     </Router>
   );
