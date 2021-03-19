@@ -1,9 +1,13 @@
 /** @jsxImportSource @emotion/react */
-import styled from "@emotion/styled";
-import { css } from "@emotion/react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Products from "./pages/Products";
+import Signup from "./pages/Signup";
 import "./App.css";
+import { css } from "@emotion/react";
+import Home from "./pages/Home";
+
+
 
 function App() {
   return (
@@ -19,6 +23,9 @@ function App() {
         `}
       >
         <Route exact path="/" component={Home} />
+        <Route exact path="/" component={Products} />
+        <Route path="/login" component={Login} />
+        <Route path="/sign-up" component={Signup} />
       </div>  
     </Router>
   );

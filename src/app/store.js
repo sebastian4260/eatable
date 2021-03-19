@@ -1,8 +1,15 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import orderReducer from "../features/orders/ordersSlice";
+import sessionReducer from "../features/session/sessionSlice";
+import usersReducer from "../features/users/usersSlice";
+
 
 export default configureStore({
   reducer: {
-    counter: counterReducer,
+    orders: orderReducer,
+    session: sessionReducer,
+    users: usersReducer,
   },
 });
+
+
