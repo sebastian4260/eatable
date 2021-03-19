@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./pages/Home";
+import Loading from "./pages/LoadingPage";
 import "./App.css";
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
           background: #FFFFFF;
         `}
       >
-        <Route exact path="/" component={Home} />
+        <Route exact path="/" component={Loading} />
       </div>  
     </Router>
   );
