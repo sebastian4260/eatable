@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router";
-import Navbar from "../Components/Contents/NavBar";
+import Template from "./Template";
 import { fetchLogout } from "../features/session/sessionSlice";
 import { fetchProfile } from "../features/users/usersSlice";
 import StyledButton from "../Components/UI/StyledButton";
@@ -24,7 +24,7 @@ export default function Profile() {
   }
 
   return (
-    <div>
+    <Template>
       <SectionTitle>My Profile</SectionTitle>
       <div
         css={css`
@@ -73,8 +73,7 @@ export default function Profile() {
         <StyledButton onClick={() => dispatch(fetchLogout(token))}>
           Logout
         </StyledButton>
-        <Navbar />
       </Footer>
-    </div>
+    </Template>
   );
 }

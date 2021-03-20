@@ -5,7 +5,7 @@ import "./App.css";
 import Home from "./pages/Home";
 import Loading from "./pages/LoadingPage";
 import Login from "./pages/Login";
-import Signup from "./pages/Signup";
+//import Signup from "./pages/Signup";
 import Profile from "./pages/Profile";
 
 
@@ -19,12 +19,12 @@ function App() {
           height: 100vh;
           width: 414px;
           border-radius: 20px;
-          background: #FFFFFF;
+          background: #F6F6F9;
         `}
       >
         <Route exact path="/" component={Home} />
+        <Route path="/loading" component={Loading} />
         <Route path="/login" component={Login} />
-        <Route path="/sign-up" component={Signup} />
         <Route path="/profile" component={Profile} />
       </div>  
     </Router>

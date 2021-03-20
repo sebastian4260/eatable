@@ -1,3 +1,4 @@
+/** @jsxImportSource @emotion/react */
 import styled from "@emotion/styled";
 import Navbar from "../Components/Contents/NavBar"
 import { css } from "@emotion/react";
@@ -8,19 +9,23 @@ const StyledPage = styled.div`
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  & > .page__content {
+`;
+
+const Content = styled.div`
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-  }
+    padding: 0px 30px;
+    overflow: auto;
+    &::-webkit-scrollbar{
+      display: none;
+    }
 `;
-
 
 function Template({ children }) {
   return (
     <StyledPage>
-      <div className="page__content">{children}</div>
+      <Content>{children}</Content>
       <Navbar/>
     </StyledPage>
   );
