@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Loading from "./pages/LoadingPage";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import Profile from "./pages/Profile";
 
 import "./App.css";
 import { css } from "@emotion/react";
@@ -27,6 +28,7 @@ function App() {
         <Route exact path="/" component={Loading} />
         <Route path="/login" component={Login} />
         <Route path="/sign-up" component={Signup} />
+        <Route path="/profile" component={Profile} />
 
       </div>  
     </Router>
