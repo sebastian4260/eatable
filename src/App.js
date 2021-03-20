@@ -1,14 +1,12 @@
 /** @jsxImportSource @emotion/react */
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import { css } from "@emotion/react";
+import "./App.css";
+import Home from "./pages/Home";
 import Loading from "./pages/LoadingPage";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Profile from "./pages/Profile";
-
-import "./App.css";
-import { css } from "@emotion/react";
-import Home from "./pages/Home";
-
 
 
 function App() {
@@ -24,12 +22,10 @@ function App() {
           background: #FFFFFF;
         `}
       >
-    
-        <Route exact path="/" component={Loading} />
+        <Route exact path="/" component={Home} />
         <Route path="/login" component={Login} />
         <Route path="/sign-up" component={Signup} />
         <Route path="/profile" component={Profile} />
-
       </div>  
     </Router>
   );
