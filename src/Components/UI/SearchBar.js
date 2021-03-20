@@ -12,12 +12,21 @@ const StyledDiv = styled.div`
   justify-content: space-between;
   border: #000000;
   padding: 53px 41px;
+  & > .input_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    & > i{
+      font-size: 18px;
+    }
+  }
 `;
 
 function SearchBar ({placeholder}){
   return(
     <StyledDiv>
-      <div>
+      <div className="input_container">
         <i class="ri-search-line" />
         <StyledInput placeholder={placeholder} />
       </div>
