@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import styled from "@emotion/styled";
-import { css } from "@emotion/react";
+//import { css } from "@emotion/react";
 
 const StyledImg = styled.img`
   width: 180px;
